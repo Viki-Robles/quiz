@@ -1,12 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid, Typography } from '@material-ui/core';
 import Questions from './Questions/Questions';
 
+const useStyles = makeStyles({
+  typography: {
+      color: '#191970',
+      textAlign:'center',
+      marginTop: '40px'
+  }
+});
+
+
 function App() {
+  const classes = useStyles();
+
   return (
     <div className="App">
-     <h1>Quiz App</h1>
+     <Typography className={classes.typography} component="h4" variant="h4">Quiz App</Typography>
      <Questions/>
     </div>
   );
